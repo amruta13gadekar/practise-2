@@ -1,16 +1,14 @@
 import sys
-if len(sys.argv) ==2:
-  Empsalary=int(sys.argv[1])
-  Empbonus=int(sys.argv[2])
+if len(sys.argv)==2:
+  script_name=sys.argv[0]
+  salary=float(sys.argv[1])
   print("user provided input values:")
 else:
-  script_name=sys.argv[0]
-  Empsalary=90000
-  Empbonus=0.10
+  salary=97000
   print("No input given-using default values:")
 
-  salary=Empsalary*Empbonus
+bonus=salary*0.10
+total_salary=salary+bonus
 
-print("empsalary:",Empsalary)
-print("empbonus:",Empbonus)
-print("Salary:",salary)
+print("Bonus:",bonus)
+print("Updated salary:",total_salary)
